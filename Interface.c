@@ -5,6 +5,7 @@ to view tables  and the data inside in SQL. it made in C-lang. programmer = Moha
 #include <stdlib.h>
 #include <mariadb/mysql.h>
 #include <string.h>
+#include <unistd.h>
 
 void close_error(MYSQL *con)
 {
@@ -37,7 +38,7 @@ int main()
         int answer;
 
         printf("\nWelcome to mysql interface!!\n\n");
-        printf("Choose 1,2,3 or 4 from the following:\n[1] Show data from tables.\n[2] Use a table.\n[3] Show db version.\n[4] Quit?\n\n>>> ");
+        printf("Choose 1,2,3 or 4 from the following:\n[1] Show all tables in db.\n[2] Use a table.\n[3] Show db version.\n[4] Quit?\n\n>>> ");
         scanf("%d", &answer);
         printf("\n");
 
@@ -56,7 +57,9 @@ int main()
             while ((record = mysql_fetch_row(rs)))
             {
                 printf("%s\n", record[0]);
+                
             }
+            sleep(3);
         }
 
         else if (answer == 2)
@@ -70,8 +73,7 @@ int main()
             memset(input, '\0', sizeof(input));
 
             sprintf(input, "SELECT * FROM %s;\n", &table_name);
-            // printf("current input is %s\n", input);
-            // close_error(0);
+            
 
             if (mysql_query(con, input) != 0)
             {
