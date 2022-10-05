@@ -6,13 +6,10 @@ to view tables  and the data inside in SQL. it made in C-lang. programmer = Moha
 #include <mariadb/mysql.h>
 #include <string.h>
 #include <unistd.h>
+#include "Interface.h"
 
-void close_error(MYSQL *con)
-{
-    fprintf(stderr, "%s\n", mysql_error(con));
-    mysql_close(con);
-    exit(1);
-}
+
+
 
 int main()
 {
