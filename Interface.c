@@ -6,7 +6,7 @@ to view tables  and the data inside in SQL. it made in C-lang. programmer = Moha
 #include <mariadb/mysql.h>
 #include <string.h>
 #include <unistd.h>
-#include "Interface.h"// this the header that conatains the error function.
+#include "interface.h"// this the header that conatains the error function.
 
 
 
