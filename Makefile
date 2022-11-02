@@ -94,5 +94,5 @@ target.o: target.c interface.h
 
 
 clear:
-	rm *.o test1 interface
+	rm *.o  circuits constructorResults constructorStandings constructors driverStandings driverslapTimes pitStops qualifying races results seasons status target interface
 
