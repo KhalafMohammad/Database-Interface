@@ -11,6 +11,8 @@
 int main()
 {
     char table_name[100] = "pitStops";
+    int raceId;
+    int driverId;
     int stop;
     int lap;
     char time[255];
@@ -90,6 +92,14 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
+            printf("Insert into raceId?\n>>> ");
+            scanf("%d", &raceId);
+            sleep(1);
+
+            printf("Insert into driverId?\n>>> ");
+            scanf("%d", &driverId);
+            sleep(1);
+
             printf("Insert into stop?\n>>> ");
             scanf("%d", &stop);
             sleep(1);
@@ -113,8 +123,8 @@ int main()
             char added_pitStops[maximum_array];
             memset(added_pitStops, '\0', sizeof(added_pitStops));
 
-            sprintf(added_pitStops, "INSERT into %s(lap, position, time, milliseconds)VALUES(\'%d\', \'%d\', \'%s\', \'%s\', \'%d\');",
-                    table_name, stop, lap, time, duration, milliseconds);
+            sprintf(added_pitStops, "INSERT into %s(raceId, driverId,  stop, lap, time, duration, milliseconds)VALUES(\'%d\', \'%d\', \'%d\', \'%d\', \'%s\', \'%s\', \'%d\');",
+                    table_name, raceId, driverId,  stop, lap, time, duration, milliseconds);
 #ifdef DEBUG
     printf("\n%s\n", added_pitStops);
 #endif                   

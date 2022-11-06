@@ -89,10 +89,6 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
-            // printf("Insert into year?\n>>> ");
-            // scanf("%d", &year);
-            // sleep(1);
-
             printf("Insert into status?\n>>> ");
             scanf("%s", status);
             sleep(1);

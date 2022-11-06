@@ -5,18 +5,20 @@
 #include <unistd.h>
 #include "interface.h"
 
-// #define DEBUG
+#define DEBUG
 #define maximum_array 3000
 
 int main()
 {
-    char table_name[100] = "lapTimes";
-    int raceId;
-    int driverId;
-    int lap;
-    int position;
-    char time[255];
-    int milliseconds;
+    char table_name[100] = "drivers";
+    char driverRef[255];
+    int number;
+    char code[3];
+    char forename[255];
+    char surname[255];
+    char dob[20];
+    char nationality[255];
+    char url[255];
 
     MYSQL *con = mysql_init(NULL);
     MYSQL_ROW row;
@@ -91,40 +93,45 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
-            printf("Insert into raceId?\n>>> ");
-            scanf("%d", &raceId);
+            printf("Insert into driverRef?\n>>> ");
+            scanf("%s", driverRef);
             sleep(1);
 
-            printf("Insert into driverId?\n>>> ");
-            scanf("%d", &driverId);
+            printf("Insert into number?\n>>> ");
+            scanf("%d", &number);
             sleep(1);
 
-            printf("Insert into lap?\n>>> ");
-            scanf("%d", &lap);
+            printf("Insert into code?\n>>> ");
+            scanf("%s", code);
             sleep(1);
 
-            printf("Insert into position?\n>>> ");
-            scanf("%d", &position);
+            printf("Insert into forename?\n>>> ");
+            scanf("%s", forename);
             sleep(1);
 
-            printf("Insert into time?\n>>> ");
-            scanf("%s", time);
+            printf("Insert into surname?\n>>> ");
+            scanf("%s", surname);
             sleep(1);
 
-            printf("Insert into milliseconds?\n>>> ");
-            scanf("%d", &milliseconds);
+            printf("Insert into dob?\n>>> ");
+            scanf("%s", dob);
             sleep(1);
 
-            char added_lapTimes[maximum_array];
-            memset(added_lapTimes, '\0', sizeof(added_lapTimes));
+            printf("Insert into nationality?\n>>> ");
+            scanf("%s", nationality);
+            sleep(1);
 
-            sprintf(added_lapTimes, "INSERT into %s(raceId, driverId, lap, position, time, milliseconds)VALUES(\'%d\', \'%d\', \'%d\', \'%d\', \'%s\', \'%d\');",
-                    table_name, raceId, driverId, lap, position, time, milliseconds);
-#ifdef DEBUG
-    printf("\n%s\n", added_lapTimes);
-#endif                   
+            printf("Insert into url?\n>>> ");
+            scanf("%s", url);
+            sleep(1);
 
-            mysql_query(con, added_lapTimes);
+            char drivers[maximum_array];
+            memset(drivers, '\0', sizeof(drivers));
+
+            sprintf(drivers, "INSERT into %s(driverRef, number, code, forename, surname, dob, nationality, url)VALUES(\'%s\', \'%d\',\'%s\',\'%s\',\'%s\', \'%s\', \'%s\', \'%s\');",
+                    table_name, driverRef, number, code, forename, surname, dob, nationality, url);
+
+            mysql_query(con, drivers);
             sleep(3);
         }
 

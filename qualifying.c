@@ -11,6 +11,9 @@
 int main()
 {
     char table_name[100] = "qualifying";
+    int raceId;
+    int driverId;
+    int constructorId;
     int number;
     int position;
     char q1[255];
@@ -91,7 +94,19 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
-            printf("Insert into nyumber?\n>>> ");
+            printf("Insert into raceId?\n>>> ");
+            scanf("%d", &raceId);
+            sleep(1);
+
+            printf("Insert into driverId?\n>>> ");
+            scanf("%d", &driverId);
+            sleep(1);
+
+            printf("Insert into constructorId?\n>>> ");
+            scanf("%d", &constructorId);
+            sleep(1);
+
+            printf("Insert into number?\n>>> ");
             scanf("%d", &number);
             sleep(1);
 
@@ -114,8 +129,8 @@ int main()
             char added_qualifying[maximum_array];
             memset(added_qualifying, '\0', sizeof(added_qualifying));
 
-            sprintf(added_qualifying, "INSERT into %s(number, position, q1, q2, q3)VALUES(\'%d\', \'%d\', \'%s\', \'%s\', \'%s\');",
-                    table_name, number, position, q1, q2, q3);
+            sprintf(added_qualifying, "INSERT into %s(raceId, driverId, constructorId, number, position, q1, q2, q3)VALUES(\'%d\', \'%d\', \'%d\', \'%d\', \'%d\', \'%s\', \'%s\', \'%s\');",
+                    table_name, raceId, driverId, constructorId, number, position, q1, q2, q3);
 #ifdef DEBUG
     printf("\n%s\n", added_qualifying);
 #endif                   

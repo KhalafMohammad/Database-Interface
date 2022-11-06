@@ -13,6 +13,7 @@ int main()
     char table_name[100] = "races";
     int year;
     int round;
+    int circuitId;
     char name[255];
     char date[255];
     char time[255];
@@ -100,6 +101,10 @@ int main()
             scanf("%d", &round);
             sleep(1);
 
+            printf("Insert into circuitId?\n>>> ");
+            scanf("%d", &circuitId);
+            sleep(1);
+
             printf("Insert into name?\n>>> ");
             scanf("%s", name);
             sleep(1);
@@ -119,8 +124,8 @@ int main()
             char added_races[maximum_array];
             memset(added_races, '\0', sizeof(added_races));
 
-            sprintf(added_races, "INSERT into %s(year, round, name, date, time, url)VALUES(\'%d\', \'%d\', \'%s\', \'%s\', \'%s\', \'%s\');",
-                    table_name, year, round, name, date, time, url);
+            sprintf(added_races, "INSERT into %s(year, round, circuitId, name, date, time, url)VALUES(\'%d\', \'%d\', \'%d\', \'%s\', \'%s\', \'%s\', \'%s\');",
+                    table_name, year, round, circuitId, name, date, time, url);
 #ifdef DEBUG
     printf("\nyour query is %s\n", added_races);
 #endif                   

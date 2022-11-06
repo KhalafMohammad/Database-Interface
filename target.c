@@ -12,7 +12,9 @@ int main()
 {
     char table_name[100] = "target";
 
-    // int targetId;
+    int targetId;
+    int raceId;
+    int driverId;
     int win;
     
 
@@ -89,6 +91,18 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
+            printf("Insert into targetId?\n>>> ");
+            scanf("%d", &targetId);
+            sleep(1);
+
+            printf("Insert into raceId?\n>>> ");
+            scanf("%d", &raceId);
+            sleep(1);
+
+            printf("Insert into driverId?\n>>> ");
+            scanf("%d", &driverId);
+            sleep(1);
+
             printf("Insert into win?\n>>> ");
             scanf("%d", &win);
             sleep(1);
@@ -96,8 +110,8 @@ int main()
             char added_target[maximum_array];
             memset(added_target, '\0', sizeof(added_target));
 
-            sprintf(added_target, "INSERT into %s(win)VALUES(\'%d\');",
-                    table_name, win);
+            sprintf(added_target, "INSERT into %s(targetId, raceId, driverId, win)VALUES(\'%d\', \'%d\', \'%d\', \'%d\');",
+                    table_name, targetId, raceId, driverId, win);
 #ifdef DEBUG
     printf("\nyour query is %s\n", added_target);
 #endif                   

@@ -3,7 +3,7 @@
 #target: dependencies
 #	action
 
-all: circuits constructorResults constructorStandings constructors driverStandings driverslapTimes pitStops qualifying races results seasons status target interface
+all: circuits constructorResults constructorStandings constructors driverStandings drivers lapTimes pitStops qualifying races results seasons status target interface
 
 interface: Interface.o error.o
 	gcc -Wall -Wextra -o interface error.o Interface.o $$(mariadb_config --libs)
@@ -94,5 +94,5 @@ target.o: target.c interface.h
 
 
 clear:
-	rm *.o  circuits constructorResults constructorStandings constructors driverStandings driverslapTimes pitStops qualifying races results seasons status target interface
+	rm *.o  circuits constructorResults constructorStandings constructors driverStandings drivers lapTimes pitStops qualifying races results seasons status target interface
 

@@ -11,7 +11,10 @@
 int main()
 {
     char table_name[100] = "results";
-    
+    int raceId;
+    int driverId;
+    int constructorId;
+    int number;
     int grid;
     int position;
     char positionText[255];
@@ -24,6 +27,7 @@ int main()
     int rank;
     char fastestLapTime[255];
     char fastestLapSpeed[255];
+    int statusId;
   
     
 
@@ -100,6 +104,22 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
+            printf("Insert into raceId?\n>>> ");
+            scanf("%d", &raceId);
+            sleep(1);
+
+            printf("Insert into driverId?\n>>> ");
+            scanf("%d", &driverId);
+            sleep(1);
+
+            printf("Insert into constructorId?\n>>> ");
+            scanf("%d", &constructorId);
+            sleep(1);
+
+            printf("Insert into number?\n>>> ");
+            scanf("%d", &number);
+            sleep(1);
+
             printf("Insert into grid?\n>>> ");
             scanf("%d", &grid);
             sleep(1);
@@ -148,14 +168,18 @@ int main()
             scanf("%s", fastestLapSpeed);
             sleep(1);
 
+            printf("Insert into statusId?\n>>> ");
+            scanf("%d", &statusId);
+            sleep(1);
+
             
 
 
             char added_results[maximum_array];
             memset(added_results, '\0', sizeof(added_results));
 
-            sprintf(added_results, "INSERT into %s(grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap , rank, fastestLapTime, fastestLapSpeed)VALUES(\'%d\', \'%d\', \'%s\', \'%d\', \'%f\', \'%d\', \'%s\', \'%d\', \'%d\', \'%d\', \'%s\', \'%s\');",
-                    table_name, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap , rank, fastestLapTime, fastestLapSpeed);
+            sprintf(added_results, "INSERT into %s(raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap , rank, fastestLapTime, fastestLapSpeed, statusId)VALUES(\'%d\', \'%d\', \'%d\', \'%d\', \'%d\', \'%d\', \'%s\', \'%d\', \'%f\', \'%d\', \'%s\', \'%d\', \'%d\', \'%d\', \'%s\', \'%s\',\'%d\');",
+                    table_name, raceId, driverId, constructorId, number, grid, position, positionText, positionOrder, points, laps, time, milliseconds, fastestLap , rank, fastestLapTime, fastestLapSpeed, statusId);
 #ifdef DEBUG
     printf("\nyour query is %s\n", added_results);
 #endif                   

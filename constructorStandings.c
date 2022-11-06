@@ -11,6 +11,8 @@
 int main()
 {
     char table_name[100] = "constructorStandings";
+    int raceId;
+    int constructorId;
     float points;
     int position;
     char positionText[255];
@@ -89,6 +91,14 @@ int main()
             printf("what do you want to insert?\nAnswer the following quistions with what you want to insert into the table.\n");
             sleep(2);
 
+            printf("Insert into raceId?\n>>> ");
+            scanf("%d", &raceId);
+            sleep(1);
+
+            printf("Insert into constructorId?\n>>> ");
+            scanf("%d", &constructorId);
+            sleep(1);
+
             printf("Insert into points?\n>>> ");
             scanf("%f", &points);
             sleep(1);
@@ -108,8 +118,8 @@ int main()
             char added_constructorStandings[maximum_array];
             memset(added_constructorStandings, '\0', sizeof(added_constructorStandings));
 
-            sprintf(added_constructorStandings, "INSERT into %s(points, position, positionText, wins)VALUES(\'%f\', \'%d\', \'%s\', \'%d\');",
-                    table_name, points, position, positionText, wins);
+            sprintf(added_constructorStandings, "INSERT into %s(points, position, positionText, wins)VALUES(\'%d\', \'%d\', \'%f\', \'%d\', \'%s\', \'%d\');",
+                    table_name, raceId, constructorId, points, position, positionText, wins);
 
             mysql_query(con, added_constructorStandings);
             sleep(3);
