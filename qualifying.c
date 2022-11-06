@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "qualifying";
+    const char table_name[100] = "qualifying";
     // int raceId;
     // int driverId;
     // int constructorId;

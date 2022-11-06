@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "status";
+    const char table_name[100] = "status";
 
     // int statusId;
     char status[255];

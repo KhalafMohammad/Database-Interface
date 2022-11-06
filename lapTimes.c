@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "lapTimes";
+    const char table_name[100] = "lapTimes";
     // int raceId;
     // int driverId;
     // int lap;

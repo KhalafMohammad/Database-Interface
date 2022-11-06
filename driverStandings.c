@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "driverStandings";
+    const char table_name[100] = "driverStandings";
     // int raceId;
     // int driverId;
     // float points;

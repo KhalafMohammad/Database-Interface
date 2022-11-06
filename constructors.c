@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "constructors";
+    const char table_name[100] = "constructors";
     // char constructorRef[255];
     // char name[255];
     // char nationality[255];

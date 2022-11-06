@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "races";
+    const char table_name[100] = "races";
     // int year;
     // int round;
     // int circuitId;

@@ -10,15 +10,15 @@
 
 int main()
 {
-    char table_name[100] = "drivers";
-    char driverRef[255];
-    int number;
-    char code[3];
-    char forename[255];
-    char surname[255];
-    char dob[20];
-    char nationality[255];
-    char url[255];
+    const char table_name[100] = "drivers";
+    // char driverRef[255];
+    // int number;
+    // char code[3];
+    // char forename[255];
+    // char surname[255];
+    // char dob[20];
+    // char nationality[255];
+    // char url[255];
 
     MYSQL *con = mysql_init(NULL);
     MYSQL_ROW row;

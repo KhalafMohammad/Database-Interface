@@ -10,7 +10,7 @@
 
 int main()
 {
-    char table_name[100] = "seasons";
+    const char table_name[100] = "seasons";
 
     // int year;
     // char url[255];

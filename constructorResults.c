@@ -11,7 +11,7 @@
 
 int main()
 {
-    char table_name[20] = "constructorResults";
+    const char table_name[20] = "constructorResults";
     // int raceId;
     // int constructorId;
     // int points;

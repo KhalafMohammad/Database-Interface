@@ -15,7 +15,7 @@ to view tables  and the data inside in SQL. it made in C-lang. programmer = Moha
 
 int main()
 {
-    char table_name[10] = "circuits"; // Name of the table 
+    const char table_name[10] = "circuits"; // Name of the table 
     // char circuitRef[255];  // name of the columns in the table
     // char name[255];
     // char location[255];
