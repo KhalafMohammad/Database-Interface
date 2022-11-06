@@ -11,10 +11,10 @@
 int main()
 {
     char table_name[100] = "constructors";
-    char constructorRef[255];
-    char name[255];
-    char nationality[255];
-    char url[255];
+    // char constructorRef[255];
+    // char name[255];
+    // char nationality[255];
+    // char url[255];
 
     MYSQL *con = mysql_init(NULL);
     MYSQL_ROW row;

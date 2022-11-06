@@ -11,23 +11,23 @@
 int main()
 {
     char table_name[100] = "results";
-    int raceId;
-    int driverId;
-    int constructorId;
-    int number;
-    int grid;
-    int position;
-    char positionText[255];
-    int positionOrder;
-    float points;
-    int laps;
-    char time[255];
-    int milliseconds;
-    int fastestLap;
-    int rank;
-    char fastestLapTime[255];
-    char fastestLapSpeed[255];
-    int statusId;
+    // int raceId;
+    // int driverId;
+    // int constructorId;
+    // int number;
+    // int grid;
+    // int position;
+    // char positionText[255];
+    // int positionOrder;
+    // float points;
+    // int laps;
+    // char time[255];
+    // int milliseconds;
+    // int fastestLap;
+    // int rank;
+    // char fastestLapTime[255];
+    // char fastestLapSpeed[255];
+    // int statusId;
   
     
 

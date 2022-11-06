@@ -12,8 +12,8 @@ int main()
 {
     char table_name[100] = "seasons";
 
-    int year;
-    char url[255];
+    // int year;
+    // char url[255];
     
 
     MYSQL *con = mysql_init(NULL);

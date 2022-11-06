@@ -12,10 +12,10 @@ int main()
 {
     char table_name[100] = "target";
 
-    int targetId;
-    int raceId;
-    int driverId;
-    int win;
+    // int targetId;
+    // int raceId;
+    // int driverId;
+    // int win;
     
 
     MYSQL *con = mysql_init(NULL);

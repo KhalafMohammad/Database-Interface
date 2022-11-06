@@ -11,12 +11,12 @@
 int main()
 {
     char table_name[100] = "driverStandings";
-    int raceId;
-    int driverId;
-    float points;
-    int position;
-    char positionText[255];
-    int wins;
+    // int raceId;
+    // int driverId;
+    // float points;
+    // int position;
+    // char positionText[255];
+    // int wins;
 
     MYSQL *con = mysql_init(NULL);
     MYSQL_ROW row;

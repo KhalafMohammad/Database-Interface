@@ -16,14 +16,14 @@ to view tables  and the data inside in SQL. it made in C-lang. programmer = Moha
 int main()
 {
     char table_name[10] = "circuits"; // Name of the table 
-    char circuitRef[255];  // name of the columns in the table
-    char name[255];
-    char location[255];
-    char country[255];
-    float lat;
-    float lng;
-    int alt;
-    char url[255];
+    // char circuitRef[255];  // name of the columns in the table
+    // char name[255];
+    // char location[255];
+    // char country[255];
+    // float lat;
+    // float lng;
+    // int alt;
+    // char url[255];
     
     
     MYSQL *con = mysql_init(NULL); // make connection with mariadb 

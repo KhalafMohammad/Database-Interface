@@ -11,14 +11,14 @@
 int main()
 {
     char table_name[100] = "qualifying";
-    int raceId;
-    int driverId;
-    int constructorId;
-    int number;
-    int position;
-    char q1[255];
-    char q2[255];
-    char q3[255];
+    // int raceId;
+    // int driverId;
+    // int constructorId;
+    // int number;
+    // int position;
+    // char q1[255];
+    // char q2[255];
+    // char q3[255];
     
 
     MYSQL *con = mysql_init(NULL);

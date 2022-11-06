@@ -11,13 +11,13 @@
 int main()
 {
     char table_name[100] = "races";
-    int year;
-    int round;
-    int circuitId;
-    char name[255];
-    char date[255];
-    char time[255];
-    char url[255];
+    // int year;
+    // int round;
+    // int circuitId;
+    // char name[255];
+    // char date[255];
+    // char time[255];
+    // char url[255];
     
 
     MYSQL *con = mysql_init(NULL);

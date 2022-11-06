@@ -12,10 +12,10 @@
 int main()
 {
     char table_name[20] = "constructorResults";
-    int raceId;
-    int constructorId;
-    int points;
-    char status[255];
+    // int raceId;
+    // int constructorId;
+    // int points;
+    // char status[255];
     
     
     
